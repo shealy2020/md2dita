@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/topic.dtd" ><topic xml:lang="en-us" id="topic2436">
+   <title>An exhibit of Markdown</title>
+   <body>
+      <p>This note demonstrates some of what <xref href="http://daringfireball.net/projects/markdown/" scope="external"
+               format="html">Markdown</xref> is capable of doing.</p>
+      <p>
+         <i>Note: Feel free to play with this page. Unlike regular notes, this doesn’t automatically save itself.</i>
+      </p>
+      <section>
+         <title>Basic formatting</title>
+         <p>Paragraphs can be written like so. A paragraph is the basic block of Markdown. A paragraph is what text will turn into when there is no reason it should become anything else.</p>
+         <p>Paragraphs must be separated by a blank line. Basic formatting of <i>italics</i> and <b>bold</b> is supported. This <i>can be <b>nested</b> like</i> so.</p>
+      </section>
+      <section>
+         <title>Lists</title>
+      </section>
+      <section>
+         <required-cleanup>
+            <title>Ordered list</title>
+            <ol>
+               <li>Item 1</li>
+               <li>A second item</li>
+               <li>Number 3</li>
+               <li>Ⅳ</li>
+            </ol>
+            <p>
+               <i>Note: the fourth item uses the Unicode character for <xref href="http://www.fileformat.info/info/unicode/char/2163/index.htm"
+                        scope="external"
+                        format="html">Roman numeral four</xref>.</i>
+            </p>
+         </required-cleanup>
+      </section>
+      <section>
+         <required-cleanup>
+            <title>Unordered list</title>
+            <ul>
+               <li>An item</li>
+               <li>Another item</li>
+               <li>Yet another item</li>
+               <li>And there’s more…</li>
+            </ul>
+         </required-cleanup>
+      </section>
+      <section>
+         <title>Paragraph modifiers</title>
+      </section>
+      <section>
+         <required-cleanup>
+            <title>Code block</title>
+            <codeblock>
+               <codeph>Code blocks are very useful for developers and other people who look at code or other things that are written in plain text. As you can see, it uses a fixed-width font.
+</codeph>
+            </codeblock>
+            <p>You can also make <codeph>inline code</codeph> to add code into other things.</p>
+         </required-cleanup>
+      </section>
+      <section>
+         <required-cleanup>
+            <title>Quote</title>
+            <lq>
+               <p>Here is a quote. What this is should be self explanatory. Quotes are automatically indented when they are used.</p>
+            </lq>
+         </required-cleanup>
+      </section>
+      <section>
+         <title>Headings</title>
+         <p>There are six levels of headings. They correspond with the six levels of HTML headings. You’ve probably noticed them already in the page. Each level down uses one more hash character.</p>
+      </section>
+      <section>
+         <required-cleanup>
+            <title>Headings <i>can</i> also contain <b>formatting</b>
+            </title>
+         </required-cleanup>
+      </section>
+      <section>
+         <required-cleanup>
+            <title>They can even contain <codeph>inline code</codeph>
+            </title>
+            <p>Of course, demonstrating what headings look like messes up the structure of the page.</p>
+            <p>I don’t recommend using more than three or four levels of headings here, because, when you’re smallest heading isn’t too small, and you’re largest heading isn’t too big, and you want each size up to look noticeably larger and more important, there there are only so many sizes that you can use.</p>
+         </required-cleanup>
+      </section>
+      <section>
+         <title>URLs</title>
+         <p>URLs can be made in a handful of ways:</p>
+         <ul>
+            <li>A named link to <xref href="http://www.markitdown.net/" scope="external" format="html">MarkItDown</xref>. The easiest way to do these is to select what you want to make a link and hit <codeph>Ctrl+L</codeph>.</li>
+            <li>Another named link to <xref href="http://www.markitdown.net/" scope="external" format="html">MarkItDown</xref>
+            </li>
+            <li>Sometimes you just want a URL like <xref href="http://www.markitdown.net/" scope="external" format="html">http://www.markitdown.net/</xref>.</li>
+         </ul>
+      </section>
+      <section>
+         <title>Horizontal rule</title>
+         <p>A horizontal rule is a line that goes across the middle of the page.</p>
+         <!-- ===================== horizontal rule ===================== --><p>It’s sometimes handy for breaking things up.</p>
+      </section>
+      <section>
+         <title>Images</title>
+         <p>Markdown can also contain images. I’ll need to add something here sometime.</p>
+      </section>
+      <section>
+         <title>Finally</title>
+         <p>There’s actually a lot more to Markdown than this. See the official <xref href="http://daringfireball.net/projects/markdown/basics" scope="external"
+                  format="html">introduction</xref> and <xref href="http://daringfireball.net/projects/markdown/syntax" scope="external"
+                  format="html">syntax</xref> for more information. However, be aware that this is not using the official implementation, and this might work subtly differently in some of the little things.</p>
+      </section>
+   </body>
+   <related-links>
+      <linklist>
+         <title>Collected links</title>
+         <link href="http://daringfireball.net/projects/markdown/" scope="external"
+               format="html">
+            <linktext>Markdown</linktext>
+         </link>
+         <link href="http://www.fileformat.info/info/unicode/char/2163/index.htm"
+               scope="external"
+               format="html">
+            <linktext>Roman numeral four</linktext>
+         </link>
+         <link href="http://www.markitdown.net/" scope="external" format="html">
+            <linktext>MarkItDown</linktext>
+         </link>
+         <link href="http://www.markitdown.net/" scope="external" format="html">
+            <linktext>MarkItDown</linktext>
+         </link>
+         <link href="http://www.markitdown.net/" scope="external" format="html">
+            <linktext>http://www.markitdown.net/</linktext>
+         </link>
+         <link href="http://daringfireball.net/projects/markdown/basics" scope="external"
+               format="html">
+            <linktext>introduction</linktext>
+         </link>
+         <link href="http://daringfireball.net/projects/markdown/syntax" scope="external"
+               format="html">
+            <linktext>syntax</linktext>
+         </link>
+      </linklist>
+   </related-links>
+</topic>

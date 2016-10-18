@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/topic.dtd" ><topic xml:lang="en-us" id="topic300">
+   <title>SjH TEST &gt; Markdown &gt; HTML &gt; DITA</title>
+   <body>
+      <p>Paragraph <i>test</i> and <b>list</b>:</p>
+      <p>-hyphen
+-list
+-item</p>
+      <p>*asterix
+ *list
+*item
+ *nested</p>
+      <p>1.ordered
+1.list
+1.item
+ 1.nested
+ 1. list</p>
+      <section>
+         <title>Example {.example}</title>
+         <p>Code example on <codeph>for</codeph> loop:</p>
+         <codeblock>
+            <codeph>for i in items:
+    println(i)
+</codeph>
+         </codeblock>
+      </section>
+      <section>
+         <title>Images</title>
+         <p>An inline <image href="images/tech-writer.png">
+               <alt>Alt</alt>
+            </image>.</p>
+         <required-cleanup remap="figure">
+            <ph>
+               <image href="images/tech-writer.png">
+                  <alt>Alt</alt>
+               </image>
+               <required-cleanup remap="figcaption">
+                  <ph>Alt</ph>
+               </required-cleanup>
+            </ph>
+         </required-cleanup>
+         <required-cleanup remap="figure">
+            <ph>
+               <image href="images/tech-writer.png">
+                  <alt>Alt</alt>
+               </image>
+               <required-cleanup remap="figcaption">
+                  <ph>Alt</ph>
+               </required-cleanup>
+            </ph>
+         </required-cleanup>
+      </section>
+      <section>
+         <title>Links</title>
+         <p>*<xref href="test.md" format="html">Markdown</xref>
+*<xref href="test.dita" format="html">DITA</xref>
+*<xref href="test.dita">HTML</xref>
+*<xref href="http://www.example.com/test.html" scope="external" format="html">External</xref>
+*[key]</p>
+      </section>
+   </body>
+   <related-links>
+      <linklist>
+         <title>Collected links</title>
+         <link href="test.md" format="html">
+            <linktext>Markdown</linktext>
+         </link>
+         <link href="test.dita" format="html">
+            <linktext>DITA</linktext>
+         </link>
+         <link href="test.dita">
+            <linktext>HTML</linktext>
+         </link>
+         <link href="http://www.example.com/test.html" scope="external" format="html">
+            <linktext>External</linktext>
+         </link>
+      </linklist>
+   </related-links>
+</topic>
