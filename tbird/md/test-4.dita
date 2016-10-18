@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/topic.dtd" ><topic xml:lang="en-us" id="topic2642">
+   <title>Markdown to DITA</title>
+   <body>
+      <p>I put together a script/pipeline that inputs a Markdown file(s), converts it to HTML, then outputs the HTML as a DITA topic(s). The Markdown workflow that I propose here is speculative because I am unfamiliar with current workflow practices among and within Ingeniux teams. I suspect that we will need to tinker with it before it can be considered a viable option. You will find the document here.</p>
+      <section>
+         <title>Initial Assumptions </title>
+         <ul>
+            <li>Documentation is code; therefore, docs should track well with versioned code in source control or live with the code in source control. </li>
+            <li>For source control, I have a Git/Github model in mind. (Git/Github may not be the best tool within Ingeniux contributors.) </li>
+            <li>Markdown isn’t an industry standard. For the current conversation script to work, contributors need to work within a particular flavor of Markdown for documentation. The conversion code requires <xref href="http://fletcherpenney.net/multimarkdown/" scope="external" format="html">Multimarkdown</xref> (MMD). MMD is a superset of <xref href="https://guides.github.com/features/mastering-markdown/" scope="external"
+                     format="html">Markdown</xref>, so for basic writing tasks, generic Markdown will convert to HTML without issue.  </li>
+            <li>MMD adds the following features to Markdown: 
+
+<ul>
+                  <li>Footnotes </li>
+                  <li>Tables </li>
+                  <li>Math support </li>
+                  <li>Automatic cross-referencing ability </li>
+                  <li>Image attributes </li>
+                  <li>Table and image captions </li>
+                  <li>Definition lists 
+*Document metadata (e.g., title, author, date, etc.) </li>
+               </ul>
+            </li>
+            <li>Ingeniux CMS does not manage the source, thus it does not manage write/edit/review workflow; The CMS reflects current state of topics, search, link management, integrates with source-control system through CI system, and translation management. </li>
+            <li>After DITA source has been imported into the CMS, let’s assume for now that IGX development processes DITA in ways analogous to the DITA Open Toolkit. </li>
+         </ul>
+      </section>
+      <section>
+         <title>Setup</title>
+         <p>Download and install <xref href="https://code.visualstudio.com/?utm_expid=101350005-28.R1T8FshdTBWEfZjY0s7XKQ.0&amp;utm_referrer=https%3A%2F%2Fwww.google.com%2F"
+                  scope="external"
+                  format="html">Visual Studio Code</xref>. </p>
+         <p>Download and install <xref href="https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint#review-details"
+                  scope="external"
+                  format="html">markdownlint</xref>.</p>
+         <p>Download and install <xref href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git"
+                  scope="external"
+                  format="html">Git</xref>.</p>
+      </section>
+      <section>
+         <title>User Scenario</title>
+         <p>This user scenario shows how contributors could write in Markdown and then add content to an Ingeniux DITA pipeline.</p>
+         <p>Contributor:</p>
+         <ol>
+            <li>
+               <p>Copy the md2dita repository from GitHub:
+git clone https://github.com/shealy2020/md2dita.git </p>
+            </li>
+            <li>
+               <p>Create a new branch: git checkout -b my-md-branch</p>
+            </li>
+            <li>
+               <p>Add a new markdown file to the markdown (md) directory in collection.</p>
+            </li>
+            <li>
+               <p>Edit markdown file in Visual Studio Code.</p>
+            </li>
+            <li>
+               <p>Use markdownlint to check Markdown construction.</p>
+            </li>
+            <li>
+               <p>Add new file entry to markdown.ditamap.</p>
+            </li>
+            <li>
+               <p>Add and update files in Git.</p>
+            </li>
+            <li>
+               <p>Push local changes to remote repository. git push origin master</p>
+            </li>
+         </ol>
+         <p>Administrator or automated script:</p>
+         <ol>
+            <li>
+               <p>Run md2dita.bat to convert Markdown to DITA.</p>
+            </li>
+            <li>
+               <p>Import new and changed DITA files and maps to Ingeniux CMS.</p>
+            </li>
+            <li>
+               <p>Publish to staging DSS.</p>
+            </li>
+         </ol>
+         <p>Note: I’m working on a continuous integration (CI) script that automatically builds, tests, and exports DITA to the Ingeniux CMS.</p>
+      </section>
+   </body>
+   <related-links>
+      <linklist>
+         <title>Collected links</title>
+         <link href="http://fletcherpenney.net/multimarkdown/" scope="external" format="html">
+            <linktext>Multimarkdown</linktext>
+         </link>
+         <link href="https://guides.github.com/features/mastering-markdown/" scope="external"
+               format="html">
+            <linktext>Markdown</linktext>
+         </link>
+         <link href="https://code.visualstudio.com/?utm_expid=101350005-28.R1T8FshdTBWEfZjY0s7XKQ.0&amp;utm_referrer=https%3A%2F%2Fwww.google.com%2F"
+               scope="external"
+               format="html">
+            <linktext>Visual Studio Code</linktext>
+         </link>
+         <link href="https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint#review-details"
+               scope="external"
+               format="html">
+            <linktext>markdownlint</linktext>
+         </link>
+         <link href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git"
+               scope="external"
+               format="html">
+            <linktext>Git</linktext>
+         </link>
+      </linklist>
+   </related-links>
+</topic>
